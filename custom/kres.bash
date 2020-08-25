@@ -1,5 +1,7 @@
 export NEXUS_USERNAME="trumans"
-export NEXUS_PASSWORD="ciss!ghir5CUND!neap"
+export NEXUS_PASSWORD="smub_kaur-TEAF0sheb"
+export ORG_GRADLE_PROJECT_nexusUsername=${NEXUS_USERNAME}
+export ORG_GRADLE_PROJECT_nexusPassword=${NEXUS_PASSWORD}
 
 ssh-add ~/.ssh/id_ed25519
 
@@ -34,5 +36,14 @@ function kr-vpn-forwarding {
     return
     ;;
   esac
+}
+
+
+function kr-zero-proxy-start {
+  kr-zero-proxy --action=start
+}
+
+function kr-zero-proxy-env {
+  kr-zero-proxy --action=env
 }
 
